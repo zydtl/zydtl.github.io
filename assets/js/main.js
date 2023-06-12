@@ -258,3 +258,19 @@
    */
   new PureCounter();
 })();
+
+const slider = document.querySelector('.slider');
+const slides = document.querySelector('.slides');
+
+let slideWidth = slider.clientWidth;
+let slideIndex = 0;
+
+function slide() {
+  slideIndex++;
+  if (slideIndex >= slides.children.length) {
+    slideIndex = 0;
+  }
+  slides.style.transform = `translateX(-${slideIndex * slideWidth}px)`;
+}
+
+setInterval(slide, 3000);
