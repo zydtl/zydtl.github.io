@@ -259,8 +259,10 @@
   new PureCounter();
 })();
 
-const slider = document.querySelector('.slider');
-const slides = document.querySelector('.slides');
+// ini slider foto about
+
+const slider = document.querySelector(".slider");
+const slides = document.querySelector(".slides");
 
 let slideWidth = slider.clientWidth;
 let slideIndex = 0;
@@ -274,3 +276,20 @@ function slide() {
 }
 
 setInterval(slide, 3000);
+
+// music
+var audio = document.getElementById("backgroundMusic");
+var playPauseButton = document.getElementById("playPauseButton");
+var playPauseIcon = document.getElementById("playPauseIcon");
+
+function togglePlay() {
+  if (audio.paused) {
+    audio.play();
+    playPauseIcon.classList.remove("fa-play");
+    playPauseIcon.classList.add("fa-pause");
+  } else {
+    audio.pause();
+    playPauseIcon.classList.remove("fa-pause");
+    playPauseIcon.classList.add("fa-play");
+  }
+}
