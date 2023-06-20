@@ -293,3 +293,6 @@ function togglePlay() {
     playPauseIcon.classList.add("fa-play");
   }
 }
+
+
+// contact
