@@ -43,7 +43,7 @@ a {
 }
 
 a:hover {
-  color: #35e888;
+  color: #facf0f;
   text-decoration: none;
 }
 
@@ -406,7 +406,7 @@ section .container {
 
 /* img slide */
 .slider {
-  width: 100%;
+  display: inline-block; /* Agar ukuran mengikuti isi */
   overflow: hidden;
 }
 
@@ -416,8 +416,15 @@ section .container {
 }
 
 .slides img {
-  width: 100%;
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+  flex-shrink: 0; /* Agar tidak mengecil saat flex */
 }
+
+
+
+
 
 /*--------------------------------------------------------------
 # About
@@ -432,6 +439,8 @@ section .container {
   list-style: none;
   padding: 0;
 }
+
+
 
 .about-me .content ul li {
   margin-bottom: 20px;
@@ -452,6 +461,18 @@ section .container {
 
 .about-me .content p:last-child {
   margin-bottom: 0;
+}
+
+.hastagAbout1 {
+  color: #ae1c28;
+}
+
+.hastagAbout2 {
+  color: #ffffff;
+}
+
+.hastagAbout3 {
+  color: #21468b;
 }
 
 /*--------------------------------------------------------------
@@ -1093,7 +1114,25 @@ h3 {
   overflow: hidden;
   z-index: 1;
   background: rgba(0, 0, 0, 0.6);
+
+
+  width: 100%;
+  height: 200px; /* atau 50% dari card, bebas */
+  object-fit: cover; /* ini penting biar gambar rapi dan proporsional */
+
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
 }
+
+.project img {
+  width: 100%;
+
+}
+
+
+  
 
 .project .project-wrap::before {
   content: "";
@@ -1204,6 +1243,7 @@ h3 {
   bottom: 15px;
   right: 15px;
 }
+
 
 /*--------------------------------------------------------------
 # project Details

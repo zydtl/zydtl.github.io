@@ -277,6 +277,8 @@ function slide() {
 
 setInterval(slide, 3000);
 
+
+
 // music
 var audio = document.getElementById("backgroundMusic");
 var playPauseButton = document.getElementById("playPauseButton");
